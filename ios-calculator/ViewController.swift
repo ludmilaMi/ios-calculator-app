@@ -8,13 +8,59 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+// MARK: - Enums
+enum modes {
+    case notSet
+    case addition
+    case substraction
+    case multiplication
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+class ViewController: UIViewController {
+    @IBOutlet weak var label: UILabel!
+    
+    // MARK: - Vars
+    var labelString: String = "0"
+    var currentMode: modes = .notSet
+    var savedNum: Int = 0
+    var lastButtonWasMode: Bool = false
+    
+    // MARK: - Funcs
+    func updateText() {
+        guard let labelInt: Int = Int(labelString) else {
+            label.text = "Error"
+            return
+        }
+        label.text = "\(labelInt)"
+    
+    }
+    
+    func changeModes(newMode: modes) {
+        
     }
 
-
+    
+    @IBAction func didPressPlus(_ sender: Any) {
+    }
+    
+    @IBAction func didPressMinus(_ sender: Any) {
+    }
+    
+    @IBAction func didPressEquals(_ sender: Any) {
+    }
+    @IBAction func didPressClear(_ sender: Any) {
+    }
+    
+    @IBAction func didPressNumber(_ sender: UIButton) {
+        guard let stringValue: String = sender.titleLabel?.text else {
+            label.text = "Error"
+            return
+        }
+        labelString = labelString.appending(stringValue)
+        updateText()
+    }
+    
+    
+    
 }
 
