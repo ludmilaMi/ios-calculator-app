@@ -14,9 +14,11 @@ enum modes {
     case addition
     case substraction
     case multiplication
+    case devision
 }
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var label: UILabel!
     
     // MARK: - Vars
@@ -31,23 +33,44 @@ class ViewController: UIViewController {
             label.text = "Error"
             return
         }
+        
+        if currentMode == .notSet {
+            savedNum = labelInt
+        }
+        
         label.text = "\(labelInt)"
     
     }
     
     func changeModes(newMode: modes) {
-        
+        if savedNum == 0 {
+            return
+        }
+        currentMode = newMode
+        lastButtonWasMode = true
     }
 
     
     @IBAction func didPressPlus(_ sender: Any) {
+        changeModes(newMode: .addition)
     }
     
     @IBAction func didPressMinus(_ sender: Any) {
+        changeModes(newMode: .substraction)
     }
     
     @IBAction func didPressEquals(_ sender: Any) {
+        
     }
+    
+    @IBAction func didPressMultiply(_ sender: Any) {
+        changeModes(newMode: .multiplication)
+    }
+    
+    @IBAction func didPressDevided(_ sender: Any) {
+        changeModes(newMode: .devision)
+    }
+    
     
     
     @IBAction func didPressClear(_ sender: Any) {
@@ -64,6 +87,11 @@ class ViewController: UIViewController {
             label.text = "Error"
             return
         }
+        if lastButtonWasMode {
+            lastButtonWasMode = false
+            labelString = "0"
+        }
+        
         labelString = labelString.appending(stringValue)
         updateText()
     }
