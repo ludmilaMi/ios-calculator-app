@@ -56,7 +56,7 @@
                                     <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressDevide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xG-zo-JMf"/>
+                                    <action selector="didPressDevided:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7oF-Ro-HAt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-IO-Bph">

@@ -50,25 +50,46 @@ class ViewController: UIViewController {
         lastButtonWasMode = true
     }
 
-    
+    // MARK: - Modes
     @IBAction func didPressPlus(_ sender: Any) {
         changeModes(newMode: .addition)
     }
-    
     @IBAction func didPressMinus(_ sender: Any) {
         changeModes(newMode: .substraction)
     }
-    
-    @IBAction func didPressEquals(_ sender: Any) {
-        
-    }
-    
     @IBAction func didPressMultiply(_ sender: Any) {
         changeModes(newMode: .multiplication)
     }
-    
     @IBAction func didPressDevided(_ sender: Any) {
         changeModes(newMode: .devision)
+    }
+    
+    
+    @IBAction func didPressEquals(_ sender: Any) {
+        guard let labelInt: Int = Int(labelString) else {
+            label.text = "Error"
+            return
+        }
+        if currentMode == .notSet || lastButtonWasMode {
+            return
+        }
+        if currentMode == .addition {
+            savedNum += labelInt
+        }
+        else if  currentMode == .substraction {
+            savedNum -= labelInt
+        }
+        else if currentMode == .multiplication {
+            savedNum *= labelInt
+        }
+        else if currentMode == .devision {
+            savedNum /= labelInt
+        }
+        
+        currentMode = .notSet
+        labelString = "\(savedNum)"
+        updateText()
+        lastButtonWasMode = true
     }
     
     
