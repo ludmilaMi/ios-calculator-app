@@ -12,6 +12,8 @@
 		15470453255D9F0C00D5FB71 /* GeneralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15470452255D9F0C00D5FB71 /* GeneralTests.swift */; };
 		1547045C255DA59300D5FB71 /* AdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1547045B255DA59300D5FB71 /* AdditionTests.swift */; };
 		15470460255DAA1B00D5FB71 /* SubtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1547045F255DAA1B00D5FB71 /* SubtractionTests.swift */; };
+		15470464255DACD100D5FB71 /* MultiplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15470463255DACD100D5FB71 /* MultiplicationTests.swift */; };
+		15470468255DAD0B00D5FB71 /* DivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15470467255DAD0B00D5FB71 /* DivisionTests.swift */; };
 		EF92E7A8240EA69100E94581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E7A7240EA69100E94581 /* AppDelegate.swift */; };
 		EF92E7AA240EA69100E94581 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E7A9240EA69100E94581 /* SceneDelegate.swift */; };
 		EF92E7AC240EA69100E94581 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF92E7AB240EA69100E94581 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 		15470452255D9F0C00D5FB71 /* GeneralTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTests.swift; sourceTree = "<group>"; };
 		1547045B255DA59300D5FB71 /* AdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 		1547045F255DAA1B00D5FB71 /* SubtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
+		15470463255DACD100D5FB71 /* MultiplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationTests.swift; sourceTree = "<group>"; };
+		15470467255DAD0B00D5FB71 /* DivisionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionTests.swift; sourceTree = "<group>"; };
 		EF92E7A4240EA69100E94581 /* ios-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF92E7A7240EA69100E94581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF92E7A9240EA69100E94581 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				15470452255D9F0C00D5FB71 /* GeneralTests.swift */,
 				1547045B255DA59300D5FB71 /* AdditionTests.swift */,
 				1547045F255DAA1B00D5FB71 /* SubtractionTests.swift */,
+				15470463255DACD100D5FB71 /* MultiplicationTests.swift */,
+				15470467255DAD0B00D5FB71 /* DivisionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -237,7 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15470460255DAA1B00D5FB71 /* SubtractionTests.swift in Sources */,
+				15470464255DACD100D5FB71 /* MultiplicationTests.swift in Sources */,
 				15470453255D9F0C00D5FB71 /* GeneralTests.swift in Sources */,
+				15470468255DAD0B00D5FB71 /* DivisionTests.swift in Sources */,
 				1547045C255DA59300D5FB71 /* AdditionTests.swift in Sources */,
 				1547044F255D9C4C00D5FB71 /* BaseTest.swift in Sources */,
 				1547044B255D9C2400D5FB71 /* CalculatorScreen.swift in Sources */,
