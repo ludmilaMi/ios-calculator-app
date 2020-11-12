@@ -72,4 +72,11 @@ class DivisionTests : BaseTest {
             .showResult()
             .assertResult(number: "250,000,000")
     }
+    
+    func testDivideByZero() {
+        calculatorScreen
+            .inputNumber(number: "1")
+            .divide(byNumber: "0")
+            .assertResult(number: "Error")
+    }
 }
